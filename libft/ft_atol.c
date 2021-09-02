@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_to_lower.c                                  :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 21:36:50 by mmondell          #+#    #+#             */
-/*   Updated: 2021/08/09 08:34:38 by mmondell         ###   ########.fr       */
+/*   Created: 2021/08/10 14:29:49 by mmondell          #+#    #+#             */
+/*   Updated: 2021/08/18 11:38:47 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_str_to_lower(char *str)
+long	ft_atol(const char *str)
 {
-	int	i;
+	int		i;
+	int		min;
+	long	num;
 
+	num = 0;
+	min = 1;
 	i = 0;
-	while (str[i++])
-		if (ft_isupper(str[i - 1]))
-			str[i - 1] += 32;
-	return (str);
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{	
+		if (str[i] == '-')
+			min *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = (str[i] - '0') + (num * 10);
+		i++;
+	}
+	return (num * min);
 }

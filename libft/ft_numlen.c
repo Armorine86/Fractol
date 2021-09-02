@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 08:45:06 by biohazard         #+#    #+#             */
-/*   Updated: 2021/08/07 08:51:39 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/08/09 08:42:53 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_numlen(long long num, int base_len)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 1;
 	if (num < 0)

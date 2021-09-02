@@ -1,24 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_to_lower.c                                  :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/17 21:36:50 by mmondell          #+#    #+#             */
-/*   Updated: 2021/08/09 08:34:38 by mmondell         ###   ########.fr       */
+/*   Created: 2021/08/30 09:40:04 by mmondell          #+#    #+#             */
+/*   Updated: 2021/09/01 12:13:08 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_str_to_lower(char *str)
+char	*read_line(int fd, int *ret, int i)
 {
-	int	i;
+	char	c;
+	char	*str;
 
-	i = 0;
-	while (str[i++])
-		if (ft_isupper(str[i - 1]))
-			str[i - 1] += 32;
+	if (!read(fd, &c, 1))
+		c = 0;
+	if (c == '\n' || c == 0)
+	{
+		str = malloc(sizeof(char) * (i + 1));
+		str[i] = 0;
+		*ret = 1;
+		if (c == 0)
+			*ret = 0;
+		return (str);
+	}
+	else
+	{
+		str = read_line(fd, ret, i + 1);
+		str[i] = c;
+	}
 	return (str);
+}
+
+int	get_next_line(int fd, char **line)
+{
+	int	ret;
+
+	ret = 1;
+	*line = read_line(fd, &ret, 0);
+	return (ret);
 }

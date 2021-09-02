@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 13:44:59 by armorine          #+#    #+#             */
-/*   Updated: 2021/08/07 20:12:38 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/08/09 08:42:22 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ void	ft_putnbr_base(long long num, int base_len, char *base)
 	decimal = "0123456789";
 	hex = "0123456789abcdef";
 	binary = "01";
-	if ((ft_strcmp(base, decimal) == 0) || (ft_strcmp(base, hex) == 0)
-		|| (ft_strcmp(base, binary) == 0))
+	if (!ft_strcmp(base, decimal) || !ft_strcmp(base, hex)
+		|| !ft_strcmp(base, binary))
 	{
 		if (num >= base_len)
 			ft_putnbr_base(num / base_len, base_len, base);

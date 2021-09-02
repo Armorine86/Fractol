@@ -3,14 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   draw_fractals.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 09:58:16 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/09 10:02:30 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 10:58:50 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+void	create_threads(t_fractol *f)
+{
+	t_fractol	cpy[6];
+	pthread_t	t_id[6];
+	int			i;
+
+	i = 0;
+	while (i < 6)
+	{
+		ft_memcpy((void *)&cpy[i], (void *)f, sizeof(t_fractol));
+		cpy[i].thread.x = ((double)(1.00 / 6)*WINW) * i;
+		cpy[i].thread.max = ((double)(1.00 / 6)*WINW) * (i + 1);
+		cpy[i].thread.y = 0;
+		i++;
+	}
+	i = 0;
+	while (i < 6)
+	{
+		pthread_create(&t_id[i], NULL, pixel_draw, &cpy[i]);
+		i++;
+	}
+	while (i >= 0)
+	{
+		pthread_join(t_id[i], NULL);
+		i--;
+	}
+}
 
 /*
 **	Function that updates the value seen in the window dynamically
@@ -19,19 +47,9 @@ void	fractal_updater(t_fractol *f)
 {
 	if (f->fractal.max_iter <= 1)
 		f->fractal.max_iter = 1;
-	next_image(f);
-	text_to_image(f);
-}
-
-/*
-**	Function to clear the image and replace it with a new one
-**	at every loop iterations
-*/
-void	next_image(t_fractol *f)
-{
-	mlx_clear_window(f->mlx.init, f->mlx.win);
-	pixel_draw(f);
+	create_threads(f);
 	mlx_put_image_to_window(f->mlx.init, f->mlx.win, f->mlx.img, 0, 0);
+	text_to_image(f);
 }
 
 /*
@@ -69,27 +87,30 @@ void	put_pixel(t_fractol *f, int x, int y, int iter)
 **	of starting coordinates before it escapes to inifinty.
 **	That gives the fractals the beautiful colors.
 */
-void	pixel_draw(t_fractol *f)
+void	*pixel_draw(void *cpy)
 {
-	int	x;
-	int	y;
-	int	color;
+	t_fractol	*f;
+	int			temp_x;
+	int			color;
 
-	y = 0;
-	while (y < WINH)
+	f = (t_fractol *)cpy;
+	f->thread.y = 0;
+	temp_x = f->thread.x;
+	while (f->thread.y < WINH)
 	{
-		x = 0;
-		while (x < WINW)
+		f->thread.x = temp_x;
+		while (f->thread.x < f->thread.max)
 		{
 			if (f->fractal.type == 1)
-				color = mandelbrot(f, x, y);
+				color = mandelbrot(f, f->thread.x, f->thread.y);
 			else if (f->fractal.type == 2)
-				color = julia(f, x, y);
+				color = julia(f, f->thread.x, f->thread.y);
 			else if (f->fractal.type == 3)
-				color = burning_ship(f, x, y);
-			put_pixel(f, x, y, color);
-			x++;
+				color = burning_ship(f, f->thread.x, f->thread.y);
+			put_pixel(f, f->thread.x, f->thread.y, color);
+			f->thread.x++;
 		}
-		y++;
+		f->thread.y++;
 	}
+	return (cpy);
 }

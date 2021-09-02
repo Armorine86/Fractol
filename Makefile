@@ -6,7 +6,7 @@
 #    By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/22 10:31:30 by mmondell          #+#    #+#              #
-#    Updated: 2021/08/02 15:47:27 by mmondell         ###   ########.fr        #
+#    Updated: 2021/09/02 10:15:34 by mmondell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ $(LIBFT):
 	@-make -C $(LIBFT_DIR)
 
 $(NAME): $(OBJ)
-	@-gcc $(OBJ) $(LNK) -lm -o $(NAME)
+	@-gcc $(OBJ) $(LNK) -lm -lpthread -o $(NAME)
 
 clean:
 	@-rm -Rf $(OBJ_DIR)
