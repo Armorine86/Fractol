@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   mandelbrot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 10:43:44 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/09 09:53:58 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:10:27 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
-**	The popular Mandelbrot set. 
-**	z_real and z_im both equals exactly 0 so
-**	the fractal looks like the original Mandelbrot
+*	The popular Mandelbrot set. 
+*	z_real and z_im both equals exactly 0 so
+*	the fractal looks like the original Mandelbrot
 */
 int	mandelbrot(t_fractol *f, int x, int y)
 {

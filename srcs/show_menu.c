@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   show_menu.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 08:14:34 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/12 09:21:24 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:11:32 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
+/*
+*	simple function to prevent leaks the mlx_string_put
+*/
 char	*strjoin_free(char *s1, char *s2)
 {
 	char	*str;
@@ -22,9 +25,9 @@ char	*strjoin_free(char *s1, char *s2)
 }
 
 /*
-**	Always visible information in the top and lower left
-**	corners of the window.
-**	Shows the number of iterations, the zoom level and RGB values.
+*	Always visible information in the top and lower left
+*	corners of the window.
+*	Shows the number of iterations, the zoom level and RGB values.
 */
 void	text_to_image(t_fractol *f)
 {
@@ -49,9 +52,9 @@ void	text_to_image(t_fractol *f)
 }
 
 /*
-**	Function to, by default, only show "Z - SHOW MENU"
-**	in the lower left corner.
-**	Pressing X brings up the control menu
+*	Function to, by default, only show "Z - SHOW MENU"
+*	in the lower left corner.
+*	Pressing X brings up the control menu
 */
 void	show_menu(t_fractol *f)
 {

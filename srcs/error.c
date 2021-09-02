@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 12:59:08 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/13 09:02:28 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:09:48 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
-**	List of parameters and commands if you type
-**	a wrong parameter in the terminal.
+*	List of parameters and commands if you type
+*	a wrong parameter in the terminal.
 */
 void	show_manual(void)
 {
@@ -41,7 +41,7 @@ void	show_manual(void)
 }
 
 /*
-**	Function that return an error code depending on what went wrong
+*	Function that return an error code depending on what went wrong
 */
 int	error_type(int n)
 {

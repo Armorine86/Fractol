@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keyboard_hooks.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 11:18:44 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/12 09:00:03 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:10:03 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ int	ft_keypress2(int key, t_fractol *f)
 }
 
 /*	
-	Each key pressed on the keyboard is assigned to a code 
-	defined in keys.h. The chosen keys are then mapped to
-	different task for the program.
+*	Each key pressed on the keyboard is assigned to a code 
+*	defined in keys.h. The chosen keys are then mapped to
+*	different task for the program.
 */
 int	ft_keypress(int key, t_fractol *f)
 {

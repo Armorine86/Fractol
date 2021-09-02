@@ -6,12 +6,23 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 09:58:16 by mmondell          #+#    #+#             */
-/*   Updated: 2021/09/02 10:58:50 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:08:22 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
+/*
+*	Declares an array of 6 copy of main fractol struct
+*	Each copy if then initiated to fractol struct values (ft_memcpy)
+*	Then it is important to limit each threads to a portion of the image to 
+*	draw. i + 1 is to make sure they don't walk on each others
+*	Then you create the threads (each one will have a unique ID)
+*	Each thread will then go into the draw_pixel function and draw a portion
+*	of the image.
+*	pthread_join will make sure all threads comes back at the same 
+*	point before the next loop.
+*/
 void	create_threads(t_fractol *f)
 {
 	t_fractol	cpy[6];
@@ -41,7 +52,7 @@ void	create_threads(t_fractol *f)
 }
 
 /*
-**	Function that updates the value seen in the window dynamically
+*	Function that updates the value seen in the window dynamically
 */
 void	fractal_updater(t_fractol *f)
 {
@@ -53,11 +64,11 @@ void	fractal_updater(t_fractol *f)
 }
 
 /*
-**	Limits the pixel draw to the min and max size of the window
-**	if the iteration equals the number of the fractal max iteration
-**	paint the pixel black. (The actual fractal set)
-**	otherwise give each RGB a different color value.
-**	RGB values have been tinkered to give a color I liked
+*	Limits the pixel draw to the min and max size of the window
+*	if the iteration equals the number of the fractal max iteration
+*	paint the pixel black. (The actual fractal set)
+*	otherwise give each RGB a different color value.
+*	RGB values have been tinkered to give a color I liked
 */
 void	put_pixel(t_fractol *f, int x, int y, int iter)
 {
@@ -82,10 +93,10 @@ void	put_pixel(t_fractol *f, int x, int y, int iter)
 }
 
 /*
-**	Function to draw each pixel starting at top left corner (0, 0)
-**	and giving a different color depending on the number of iterations
-**	of starting coordinates before it escapes to inifinty.
-**	That gives the fractals the beautiful colors.
+*	Function to draw each pixel starting at top left corner (0, 0)
+*	and giving a different color depending on the number of iterations
+*	of starting coordinates before it escapes to inifinty.
+*	That gives the fractals the beautiful colors.
 */
 void	*pixel_draw(void *cpy)
 {

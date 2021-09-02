@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   burning_ship.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 14:22:09 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/09 09:35:48 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:09:42 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
-**	Mathematic formula for the Burning Ship fractal
-**	z_real and z_im have been tinkered to exactly equals 0
-** 	so when you type ./fractol <fractal>, the image is seen as intended
+*	Mathematic formula for the Burning Ship fractal
+*	z_real and z_im have been tinkered to exactly equals 0
+* 	so when you type ./fractol <fractal>, the image is seen as intended
 */
 int	burning_ship(t_fractol *f, int x, int y)
 {

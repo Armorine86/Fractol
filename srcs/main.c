@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 10:39:15 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/09 09:54:15 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:10:15 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
-**	Check for mouse_look arguments and makes sure
-**	the third argument is actually a valid one
-**	if not, it shows the manual for valid parameters
+*	Check for mouse_look arguments and makes sure
+*	the third argument is actually a valid one
+*	if not, it shows the manual for valid parameters
 */
 void	argument_checker(t_fractol *f, char **argv, int argc)
 {
@@ -31,8 +31,8 @@ void	argument_checker(t_fractol *f, char **argv, int argc)
 }
 
 /*
-**	Basic function to kill Image and Window and
-**	Exit the programm
+*	Basic function to kill Image and Window and
+*	Exit the programm
 */
 void	exit_programm(t_fractol *f)
 {
@@ -43,9 +43,9 @@ void	exit_programm(t_fractol *f)
 }
 
 /*
-**	Compares argument passed in program parameters
-**	And if equals = 0, init all the base values of
-**	the different fractals
+*	Compares argument passed in program parameters
+*	And if equals = 0, init all the base values of
+*	the different fractals
 */
 void	fractal_checker(t_fractol *f, char *fractal)
 {
@@ -60,8 +60,8 @@ void	fractal_checker(t_fractol *f, char *fractal)
 }
 
 /*
-**	Creates all the mlx pointers and dependencies
-**	Assign pointers to all mlx functions in the mlx struct.
+*	Creates all the mlx pointers and dependencies
+*	Assign pointers to all mlx functions in the mlx struct.
 */
 void	create_mlx_link(t_fractol *f, char **argv)
 {
@@ -79,7 +79,7 @@ void	create_mlx_link(t_fractol *f, char **argv)
 }
 
 /*
-**	MAIN FUNCTION
+*	MAIN FUNCTION
 */
 int	main(int argc, char **argv)
 {

@@ -6,16 +6,16 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 10:34:42 by mmondell          #+#    #+#             */
-/*   Updated: 2021/09/02 10:40:20 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:09:34 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
-**	Function to dynamically change the values of 
-**	z_real and z_im in the fractal formula to
-**	morph the fractal with the mouse position
+*	Function to dynamically change the values of 
+*	z_real and z_im in the fractal formula to
+*	morph the fractal with the mouse position
 */
 int	mouse_mover(int x, int y, t_fractol *f)
 {
@@ -41,10 +41,10 @@ int	zoom_out(int x, int y, t_fractol *f)
 }
 
 /*
-**	Mathematic formula to keep the scale of the fractal
-**	as you zoom in and out.
-**	mouse_x and mouse_y get the pointer coordinates to zoom
-**	at cursor position
+*	keeps the scale of the fractal
+*	as you zoom in and out.
+*	mouse_x and mouse_y get the pointer coordinates to zoom
+*	at cursor position
 */
 int	zoom_in(int x, int y, t_fractol *f)
 {
@@ -60,7 +60,7 @@ int	zoom_in(int x, int y, t_fractol *f)
 }
 
 /*
-**	Mouse events for Wheel zoom and the mouse_look feature
+*	Mouse events for Wheel zoom and the mouse_look feature
 */
 int	mouse_hooks(int key, int x, int y, t_fractol *f)
 {

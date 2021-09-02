@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   julia.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 14:21:43 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/09 09:45:33 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:09:58 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
-**	Mathematic formula for the julia fractal
-**	z_real and z_im have been tinkered so that Julia
-**	gives a look that I liked.
+*	Mathematic formula for the julia fractal
+*	z_real and z_im have been tinkered so that Julia
+*	gives a look that I liked.
 */
 int	julia(t_fractol *f, int x, int y)
 {

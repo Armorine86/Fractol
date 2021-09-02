@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   init_fractals.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 09:45:11 by mmondell          #+#    #+#             */
-/*   Updated: 2021/07/09 10:03:53 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:09:53 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
-**	Initiates all different fractals base values 
-**	to be rightly seen in the window 
-**	such as Colors, max iterations, position in the plane, etc.
+*	Initiates all different fractals base values 
+*	to be rightly seen in the window 
+*	such as Colors, max iterations, position in the plane, etc.
 */
 void	init_mandelbrot(t_fractol *f)
 {

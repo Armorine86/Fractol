@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 21:03:36 by mmondell          #+#    #+#             */
-/*   Updated: 2021/09/02 10:57:54 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/02 11:12:47 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@
 # define WINW (1280)
 # define WINH (720)
 
-/*  s_mlx are the required minilibx arguments
-	init = initialise connection between software and display 
-	img = pointer to image data
-	win = pointer to created window 
+/*
+*	s_mlx are the required minilibx arguments
+*	init = initialise connection between software and display 
+*	img = pointer to image data
+*	win = pointer to created window 
 */
 typedef struct s_mlx
 {
@@ -43,7 +44,7 @@ typedef struct s_mlx
 }				t_mlx;
 
 /*
-**	Coordinates of the fractal inside the plane
+*	Coordinates of the fractal inside the plane
 */
 typedef struct s_map
 {
@@ -54,7 +55,7 @@ typedef struct s_map
 }				t_map;
 
 /*
-**	Colors the fractals (24-bits RGB)
+*	Colors the fractals (24-bits RGB)
 */
 typedef struct s_color
 {
@@ -65,12 +66,12 @@ typedef struct s_color
 }				t_color;
 
 /*
-**	Some info for the fractal
-**	type = Type of the fractal passed in the arguments
-**	max_iter = Maximum iteration for the fractals.
-**			   More iterations = more details.
-**	iter = Number of iterations before value escapes to infinity
-**		   Colors depends on the number of iterations.
+*	Some info for the fractal
+*	type = Type of the fractal passed in the arguments
+*	max_iter = Maximum iteration for the fractals.
+*			   More iterations = more details.
+*	iter = Number of iterations before value escapes to infinity
+*		   Colors depends on the number of iterations.
 */
 typedef struct s_type
 {
@@ -81,7 +82,7 @@ typedef struct s_type
 }				t_type;
 
 /*
-**	Struct for the mouse info needed for Events and Mouse_look feature
+*	Struct for the mouse info needed for Events and Mouse_look feature
 */
 typedef struct s_mouse
 {
@@ -93,9 +94,9 @@ typedef struct s_mouse
 }				t_mouse;
 
 /*
-**	Real and Imaginary parts of each variable for the
-**	fractals algorithms
-**	f(z) = z^2 + c
+*	Real and Imaginary parts of each variable for the
+*	fractals algorithms
+*	f(z) = z^2 + c
 */
 typedef struct s_complex
 {
@@ -113,7 +114,7 @@ typedef struct s_threads
 }	t_threads;
 
 /* 
-**	The master Struct that contains all the other structures 
+*	The master Struct that contains all the other structures 
 */
 typedef struct s_fractol
 {
@@ -127,7 +128,7 @@ typedef struct s_fractol
 }				t_fractol;
 
 /*
-**	General Functions
+*	General Functions
 */
 
 void		create_mlx_link(t_fractol *f, char **argv);
@@ -151,14 +152,14 @@ int			zoom_out(int x, int y, t_fractol *f);
 int			zoom_in(int x, int y, t_fractol *f);
 
 /*  
-**	FRACTALS INITIAL VALUES FUNCTIONS
+*	FRACTALS INITIAL VALUES FUNCTIONS
 */
 void		init_mandelbrot(t_fractol *f);
 void		init_julia(t_fractol *f);
 void		init_burningship(t_fractol *f);
 
 /*
-**	FRACTALS ALGO
+*	FRACTALS ALGO
 */
 int			mandelbrot(t_fractol *f, int x, int y);
 int			julia(t_fractol *f, int x, int y);
