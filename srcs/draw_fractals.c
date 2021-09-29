@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 09:58:16 by mmondell          #+#    #+#             */
-/*   Updated: 2021/09/02 11:08:22 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/09/15 14:44:41 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 */
 void	create_threads(t_fractol *f)
 {
-	t_fractol	cpy[6];
-	pthread_t	t_id[6];
+	t_fractol	cpy[8];
+	pthread_t	t_id[8];
 	int			i;
 
 	i = 0;

@@ -6,7 +6,7 @@
 #    By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/22 10:31:30 by mmondell          #+#    #+#              #
-#    Updated: 2021/09/02 10:15:34 by mmondell         ###   ########.fr        #
+#    Updated: 2021/09/29 08:57:47 by mmondell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME = fractol
 
 # Flags used during compilation
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror -O2
 
 # Color
 GREEN = \033[32m
@@ -43,7 +43,7 @@ all: obj $(LIBFT) $(NAME)
 	@echo "$(GREEN)Compilation Complete"
 
 obj:
-	@-mkdir -p $(OBJ_DIR), $(LIBFT_OBJ)
+	@-mkdir -p $(OBJ_DIR) $(LIBFT_OBJ)
 $(OBJ_DIR)%.o:$(SRCS_DIR)%.c
 	@-gcc $(FLAGS) -I $(LIBFT_DIR) -I $(INC_DIR) -o $@ -c $< 
 $(LIBFT):
