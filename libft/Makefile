@@ -6,7 +6,7 @@
 #    By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/06 15:27:16 by mmondell          #+#    #+#              #
-#    Updated: 2021/08/30 10:05:16 by mmondell         ###   ########.fr        #
+#    Updated: 2021/11/30 15:16:38 by mmondell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ OBJS	= 	${SRCS:.c=.o}
 INCL	= 	includes
 NAME	= 	libft.a
 CC		= 	gcc
-CFLAGS	= 	-Wall -Wextra -Werror -g
+CFLAGS	= 	-Wall -Wextra -Werror -O2
 
 .c.o:	
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}

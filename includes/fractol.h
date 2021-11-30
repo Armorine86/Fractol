@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 21:03:36 by mmondell          #+#    #+#             */
-/*   Updated: 2021/09/02 14:01:07 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/11/30 15:20:53 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 # include "../includes/mousekeys.h"
 # include "../libft/libft.h"
 
-# define WINW (1280)
-# define WINH (720)
+# define WINW (1920)
+# define WINH (1280)
 
 /*
 *	s_mlx are the required minilibx arguments
