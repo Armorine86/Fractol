@@ -1,5 +1,3 @@
-[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/mmondell/fract-ol)]
-
 ## A Simple fractal explorer featuring three Popular fractals using MinilibX graphic library
 
 The constraints were as follows:<br/>
