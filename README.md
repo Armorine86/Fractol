@@ -3,7 +3,7 @@
 ## A Simple fractal explorer featuring three Popular fractals using MinilibX graphic library
 
 The constraints were as follows:<br/>
-• THe software should offer the Julia set and the Mandelbrot set.<br/>
+• The software should offer the Julia set and the Mandelbrot set.<br/>
 • The mouse wheel zooms in and out, almost infinitely (within the limits of the computer).<br/>
 • It use at least a few colors to show the depth of each fractal.<br/>
 • A parameter is passed on the command line to define what type of fractal will be viewed. If no parameter is provided, or if the parameter is invalid, the program displays a list of available parameters and exits properly.<br/
