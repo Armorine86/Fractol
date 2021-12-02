@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 09:58:16 by mmondell          #+#    #+#             */
-/*   Updated: 2021/12/02 08:51:35 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/12/02 15:01:46 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,21 @@
  */
 void create_threads(t_fractol *f)
 {
-	t_fractol cpy[8];
-	pthread_t t_id[8];
+	t_fractol cpy[THREADS];
+	pthread_t t_id[THREADS];
 	int i;
 
 	i = 0;
-	while (i < 6)
+	while (i < THREADS)
 	{
 		ft_memcpy((void *)&cpy[i], (void *)f, sizeof(t_fractol));
-		cpy[i].thread.x = ((long double)(1.00 / 6) * WINW) * i;
-		cpy[i].thread.max = ((long double)(1.00 / 6) * WINW) * (i + 1);
+		cpy[i].thread.x = ((long double)(1.00 / THREADS) * WINW) * i;
+		cpy[i].thread.max = ((long double)(1.00 / THREADS) * WINW) * (i + 1);
 		cpy[i].thread.y = 0;
 		i++;
 	}
 	i = 0;
-	while (i < 6)
+	while (i < THREADS)
 	{
 		pthread_create(&t_id[i], NULL, pixel_draw, &cpy[i]);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 21:03:36 by mmondell          #+#    #+#             */
-/*   Updated: 2021/12/02 08:56:35 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/12/02 15:01:58 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 
 #define WINW (1280)
 #define WINH (720)
+#define THREADS 12
 
 /*
  *	s_mlx are the required minilibx arguments
