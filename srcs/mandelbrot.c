@@ -6,14 +6,14 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 10:43:44 by mmondell          #+#    #+#             */
-/*   Updated: 2021/12/02 08:51:33 by mmondell         ###   ########.fr       */
+/*   Updated: 2022/03/03 14:10:43 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 /*
- *	The popular Mandelbrot set.
+ *	The well known Mandelbrot set.
  *	z_real and z_im both equals exactly 0 so
  *	the fractal looks like the original Mandelbrot
  */

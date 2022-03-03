@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 21:03:36 by mmondell          #+#    #+#             */
-/*   Updated: 2021/12/02 15:01:58 by mmondell         ###   ########.fr       */
+/*   Updated: 2022/03/03 14:09:40 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ typedef struct s_map
 } t_map;
 
 /*
- *	Colors the fractals (24-bits RGB)
+ *	Colors of the fractals (24-bits RGB)
  */
 typedef struct s_color
 {
