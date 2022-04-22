@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 08:14:34 by mmondell          #+#    #+#             */
-/*   Updated: 2021/11/30 15:30:04 by mmondell         ###   ########.fr       */
+/*   Updated: 2022/04/22 11:34:30 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*strjoin_free(char *s1, char *s2)
 void	text_to_image(t_fractol *f)
 {
 	char	*str;
+
 	str = strjoin_free("ITERATIONS: ", ft_itoa(f->fractal.max_iter));
 	mlx_string_put(f->mlx.init, f->mlx.win, 10, 675, 0xFFFFFF, str);
 	free (str);
@@ -59,7 +60,7 @@ void	show_menu(t_fractol *f)
 {
 	char	*str;
 
-	 if (f->mlx.show_menu== 0)
+	if (f->mlx.show_menu == 0)
 	{
 		str = "Z - SHOW MENU";
 		mlx_string_put(f->mlx.init, f->mlx.win, 10, 600, 0xFFFFFF, str);

@@ -6,7 +6,7 @@
 /*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 11:18:44 by mmondell          #+#    #+#             */
-/*   Updated: 2021/12/01 09:55:26 by mmondell         ###   ########.fr       */
+/*   Updated: 2022/04/22 11:33:35 by mmondell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int	ft_keypress(int key, t_fractol *f)
 {
 	if (key == KEY_A || key == KEY_LEFTARROW)
 	{
-		
 		f->map.xmin -= 0.01;
 		f->map.xmax -= 0.01;
 	}
