@@ -13,8 +13,13 @@ Bonus part :<br/>
 • In addition to the zoom: moving with the arrows.<br/>
 • The color range shift.<br/>
 
+### Project Score:
+[![mmondell's 42 fract-ol Score](https://badge42.vercel.app/api/v2/cl1mb28v7003209mtmfky9fw8/project/2206132)](https://github.com/JaeSeoKim/badge42)
+
+
 ### You can add mouse_look, after the chosen fractal, as a parameter to the program to dinamically transform the image!
 I.E.: ./fractol mandelbrot mouse_look
+
 
 ## Mandelbrot
 ![alt text](https://github.com/Armorine86/Fractol/blob/master/img/Mandelbrot.png?raw=true)
